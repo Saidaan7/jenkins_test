@@ -1,0 +1,12 @@
+FROM centos
+
+RUN yum install net-tools -y
+ 
+RUN yum install ncurses -y
+
+RUN yum install httpd -y
+
+CMD /usr/sbin/httpd
+
+COPY index.html /var/www/html
+
